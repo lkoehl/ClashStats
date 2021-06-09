@@ -2,11 +2,11 @@ from cocapi import CocApi
 from dotenv import dotenv_values
 import sqlite3
 
-# conn = sqlite3.connect('./ClashStats/ClashStats.db')
-conn = sqlite3.connect('./ClashStats.db')
+conn = sqlite3.connect('./ClashStats/ClashStats.db')
+# conn = sqlite3.connect('./ClashStats.db')
 c = conn.cursor()
 
-config = dotenv_values(".env")  
+config = dotenv_values("./ClashStats/.env")  
 
 token = config["CLASH_TOKEN"]
 timeout=1 #requests timeout

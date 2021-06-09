@@ -1,10 +1,10 @@
 import discord 
 from dotenv import dotenv_values
 import sqlite3
-conn = sqlite3.connect('./ClashStats.db')
+conn = sqlite3.connect('./ClashStats/ClashStats.db')
 c = conn.cursor()
 
-config = dotenv_values(".env")  
+config = dotenv_values("./ClashStats/.env")  
 TOKEN = config["DISCORD_TOKEN"]
 
 class MyClient(discord.Client):
